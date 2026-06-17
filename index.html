@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasyid Nur Aisy | Front-End Developer Portfolio</title>
+    <meta name="description" content="Web Developer muda berbakat | Front-End Specialist | Rasyid Nur Aisy">
+
+    <!-- SEO Tambahan Biar Top Global -->
+    <meta property="og:title" content="Rasyid Nur Aisy | Front-End Developer Portfolio">
+    <meta property="og:description"
+        content="Portfolio Rasyid Nur Aisy - Web Developer muda dari Banjarnegara, spesialis Front-End dengan project keren.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rasyid.dev">
+    <meta property="og:image" content="images/foto-profile.png">
+
+    <!-- Preconnect untuk optimasi loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Stylesheets dengan async loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading" aria-hidden="true">
+        <div class="loader" aria-label="Loading..."></div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar" id="navbar" aria-label="Navigasi utama">
+            <div class="container">
+                <a href="#hero" class="logo" aria-label="Beranda">Rasyid.</a>
+                <ul class="menu" role="menubar">
+                    <li><a href="#hero" role="menuitem">Home</a></li>
+                    <li><a href="#about" role="menuitem">About</a></li>
+                    <li><a href="#skills" role="menuitem">Skills</a></li>
+                    <li><a href="#works" role="menuitem">Works</a></li>
+                    <li><a href="#contact" role="menuitem">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu" id="mobileMenu" role="menu" aria-hidden="true">
+            <ul>
+                <li><a href="#hero" role="menuitem">Home</a></li>
+                <li><a href="#about" role="menuitem">About</a></li>
+                <li><a href="#skills" role="menuitem">Skills</a></li>
+                <li><a href="#works" role="menuitem">Works</a></li>
+                <li><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="text-1" data-aos="fade-down">Hi, I'm</p>
+                    <h1 id="hero-title" class="text-2" data-aos="fade-up" data-aos-delay="200">Rasyid Nur Aisy</h1>
+                    <div class="typing-wrapper" data-aos="fade-up" data-aos-delay="400">
+                        <span id="typed"></span><span class="typed-cursor" aria-hidden="true"></span>
+                    </div>
+                    <div class="social-icons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="https://instagram.com/rasyid-instagram" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCVaTxM1Xwwqgy41tXVBQmJA" target="_blank"
+                            rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/rasyid-nuraizy-6a0ba339a/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/nuraizyrasyid-stack" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <a class="btn" href="https://wa.me/6283160891392" target="_blank" rel="noopener noreferrer"
+                        data-aos="zoom-in-up" data-aos-delay="800" style="text-decoration: none;">Hubungi Saya</a>
+                </div>
+                <div class="hero-img" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="images/foto-profile.png" alt="Foto Rasyid Nur Aisy - Web Developer" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-img" data-aos="zoom-in-left">
+                    <img src="images/foto-about.jpg" alt="Foto profil Rasyid Nur Aisy" loading="lazy">
+                </div>
+                <div class="about-text" data-aos="zoom-in-right">
+                    <h2 id="about-title" class="section-title" data-aos="zoom-in">About Me</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">
+                        Nama saya Rasyid Nur Aisy, seorang pelajar SMA yang sangat antusias di dunia web development.
+                        Saya lahir di Banjarnegara pada 14 juli 2010. Saya fokus sebagai Front-End Developer dan
+                        mampu membuat website yang responsif, modern, dan user-friendly menggunakan HTML, CSS, serta
+                        JavaScript.
+                    </p>
+                    <p data-aos="fade-up" data-aos-delay="400">
+                        Saya selalu terbuka untuk belajar teknologi baru dan siap berkolaborasi untuk proyek yang
+                        menarik!
+                    </p>
+                    <button class="btn" data-aos="zoom-in-up" data-aos-delay="600" onclick="openWhatsAppLetsTalk()">Mari
+                        Bicara</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section-title" data-aos="zoom-in">My Skills</h2>
+                <div class="skills-grid" role="list">
+                    <article class="skill-card" data-aos="zoom-in-up" data-aos-delay="100" role="listitem">
+                        <div class="skill-logo-wrapper">
+                            <div class="skill-logo-front">
+                                <img src="images/logo-html.png" alt="Logo HTML5" loading="lazy">
+                            </div>
+                            <div class="skill-logo-back">
+                                <img src="logo-html.png" alt="Logo HTML5" loading="lazy">
+                            </div>
+                        </div>
+                        <h3>HTML5</h3>
+                        <p>Struktur semantik dan aksesibilitas tinggi untuk web modern.</p>
+                        <a href="https://github.com/nuraizyrasyid-stack/html-dasar" target="_blank"
+                            rel="noopener noreferrer" class="btn">
+                            Lihat Lebih Detail
+                        </a>
+                    </article>
+                    <article class="skill-card" data-aos="zoom-in-up" data-aos-delay="300" role="listitem">
+                        <div class="skill-logo-wrapper">
+                            <div class="skill-logo-front">
+                                <img src="images/logo-css.png" alt="Logo CSS3" loading="lazy">
+                            </div>
+                            <div class="skill-logo-back">
+                                <img src="logo-css.png" alt="Logo CSS3" loading="lazy">
+                            </div>
+                        </div>
+                        <h3>CSS3</h3>
+                        <p>Desain responsif, tata letak modern dengan Flexbox & Grid, serta animasi visual yang menarik.
+                        </p>
+                        <a href="https://github.com/nuraizyrasyid-stack/web-sederhana" target="_blank"
+                            rel="noopener noreferrer" class="btn">
+                            Lihat Lebih Detail
+                        </a>
+                    </article>
+                    <article class="skill-card" data-aos="zoom-in-up" data-aos-delay="500" role="listitem">
+                        <div class="skill-logo-wrapper">
+                            <div class="skill-logo-front">
+                                <img src="images/logo-python.png" alt="Logo python" loading="lazy">
+                            </div>
+                            <div class="skill-logo-back">
+                                <img src="logo-python.png" alt="Logo python" loading="lazy">
+                            </div>
+                        </div>
+                        <h3>python</h3>
+                        <p>Implementasi logika sistem, otomatisasi sederhana, dan pemahaman struktur data fundamental.
+                        </p>
+                        <a href="https://github.com/nuraizyrasyid-stack/python-basic" target="_blank"
+                            rel="noopener noreferrer" class="btn">
+                            Lihat Lebih Detail
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works -->
+        <section class="works" id="works" aria-labelledby="works-title">
+            <div class="container">
+                <h2 id="works-title" class="section-title" data-aos="zoom-in">My Works</h2>
+
+                <!-- Filter Buttons -->
+                <div class="filter-buttons" role="tablist" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+                    <button class="filter-btn" data-filter="web" role="tab">Coding &amp; Design</button>
+                    <button class="filter-btn" data-filter="setoran" role="tab">Setoran Matan</button>
+                    <button class="filter-btn" data-filter="matan" role="tab">Portofolio Matan</button>
+                    <button class="filter-btn" data-filter="diniyyah" role="tab">Tahajji &amp; Tahfidz</button>
+                    <button class="filter-btn" data-filter="english" role="tab">Bahasa Arab</button>
+                </div>
+
+                <!-- Project Grid (HANYA 1) -->
+                <div class="project-grid" role="list">
+
+                    <!-- ==================== 7 CARD SETORAN MATAN ==================== -->
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="400"
+                        role="listitem">
+                        <img src="images/aqidatuna-1.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Aqidatuna</h3>
+
+                            <a href="https://youtu.be/a6DigpYWkIE" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="400"
+                        role="listitem">
+                        <img src="images/aqidatuna-2.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Aqidatuna</h3>
+                            <a href="https://youtu.be/p7rbcVfkw2U" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="400"
+                        role="listitem">
+                        <img src="images/aqidatuna-3.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Aqidatuna</h3>
+                            <p class="project-desc"></p>
+                            <a href="https://youtu.be/HVbiPr1UaLo" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="100"
+                        role="listitem">
+                        <img src="images/fathul-1.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Fathul 'Aliy</h3>
+                            <a href="https://youtu.be/Q4F5r5nSBSU?si=VjT6wi-QGVgf6gzG" class="btn" target="_blank">Lihat
+                                Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="150"
+                        role="listitem">
+                        <img src="images/fathul-2.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Fathul 'Aliy</h3>
+                            <a href="https://youtu.be/UApzoNdWsh4" class="btn" target="_blank">Lihat
+                                Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="200"
+                        role="listitem">
+                        <img src="images/fathul-3.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Fathul 'Aliy</h3>
+                            <p class="project-desc"></p>
+                            <a href="https://youtu.be/AWmKrRit-tQ" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="250"
+                        role="listitem">
+                        <img src="images/nabiyyuna-1.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Nabiyyuna</h3>
+                            <p class="project-desc"></p>
+
+                            <a href="https://youtu.be/hFvqkJUVHbk" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="300"
+                        role="listitem">
+                        <img src="images/nabiyyuna-2.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Nabiyyuna</h3>
+                            <p class="project-desc">.</p>
+                            <a href="https://youtu.be/uSenLunsmUA" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="setoran" data-aos="zoom-in" data-aos-delay="350"
+                        role="listitem">
+                        <img src="images/nabiyyuna-3.png" alt="setoran-matan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Setoran Matan Nabiyyuna</h3>
+                            <p class="project-desc">.</p>
+                            <a href="https://youtu.be/HTwtOupoYbU" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+
+
+                    <!-- ==================== CARD LAMA ==================== -->
+                    <article class="project-card" data-category="english" data-aos="zoom-in" data-aos-delay="100"
+                        role="listitem">
+                        <img src="images/poster-kisah.png" alt="Preview Landing Page Eksplorasi" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">kisah ke 2 orangtua</h3>
+                            <p class="project-desc">perjalanan hidup kedua orangtua saya.</p>
+                            <a href="https://youtu.be/6nuaaJG5mPw" target="_blank" rel="noopener noreferrer"
+                                class="btn">Lihat vidio</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="300"
+                        role="listitem">
+                        <img src="images/poster-alquran-murottal.png" alt="Preview Simple To-Do List App"
+                            loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">project vidio murottal</h3>
+                            <p class="project-desc">Qs. surah al-isro ayat : 23</p>
+                            <a href="https://youtube.com/shorts/T3mJyh71nRg?feature=share" target="_blank"
+                                rel="noopener noreferrer" class="btn">Lihat Project</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="diniyyah" data-aos="zoom-in" data-aos-delay="500"
+                        role="listitem">
+                        <img src="images/poster-ejaan.png" alt="Thumbnail Murottal Surah Al-Insan" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">tahajji surah al-fatihah</h3>
+                            <p class="project-desc">kitab qoo'idah samiriyyah.</p>
+                            <a href="https://drive.google.com/file/d/1JWIcpOlmchj9mheHkh_yu1U-HhiVhq2a/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer" class="btn">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="english" data-aos="zoom-in" data-aos-delay="700"
+                        role="listitem">
+                        <img src="images/hiwar.png" alt="Thumbnail English Speaking Video" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">percakapan basaha arab</h3>
+                            <p class="project-desc">tentang hari libur.</p>
+                            <a href="https://youtu.be/Lh6VOLsz5hs?si=hzED7poi_RTZECEL" class="btn">Lihat vidio</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="100"
+                        role="listitem">
+                        <img src="images/kitab.jpg" alt="Preview Project Baru 1" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">poster tahajji</h3>
+                            <p class="project-desc">design canva.</p>
+                            <a href="images/poster-tahajji.png" class="btn">Lihat Project</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="english" data-aos="zoom-in" data-aos-delay="200"
+                        role="listitem">
+                        <img src="images/poster hadist.png" alt="Preview Hadist tentang Niat" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Penjelasan Mengenai Hadist</h3>
+                            <p class="project-desc">Hadist tentang niat.</p>
+                            <a href="images/vidio-2.mp4" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="english" data-aos="zoom-in" data-aos-delay="300"
+                        role="listitem">
+                        <img src="images/poster kegiatan.png" alt="Thumbnail Vlog Kegiatan Ma'had" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Vlog Kegiatan Sehari-hari</h3>
+                            <p class="project-desc">Kegiatan sehari-hari di Ma'had.</p>
+                            <a href="images/vidio-1.mp4" class="btn" target="_blank">Lihat Video</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="diniyyah" data-aos="zoom-in" data-aos-delay="400"
+                        role="listitem">
+                        <img src="images/juz-30.png" alt="Thumbnail Video Baru 2" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"> tasmi' alquran</h3>
+                            <p class="project-desc"> setoran juz 30. </p>
+                            <a href="https://drive.google.com/file/d/1MmockTtXS56xSlTI70awIDjBj70IAU3K/view?usp=sharing"
+                                class="btn" target="_blank">Lihat vidio</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="diniyyah" data-aos="zoom-in" data-aos-delay="400"
+                        role="listitem">
+                        <img src="images/juz-29.png" alt="Thumbnail Video Baru 2" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"> tasmi' alquran</h3>
+                            <p class="project-desc"> setoran juz 29. </p>
+                            <a href="https://youtu.be/DBdT56DTVAA" class="btn" target="_blank">Lihat vidio</a>
+                        </div>
+                    </article>
+
+                    <!-- ==================== 3 CARD PORTOFOLIO MATAN ==================== -->
+                    <article class="project-card matan-card" data-category="matan" data-aos="zoom-in"
+                        data-aos-delay="500" data-title="Aqidatuna"
+                        data-desc="Kitab aqidah yang membahas rukun iman, sifat-sifat Allah, dan tauhid secara mendalam dan sistematis."
+                        data-link="https://docs.google.com/document/d/1XUcrkvsUjePq00vQFGBDEzySbA7iW6WglwdWF0cljSM/edit?usp=sharing"
+                        role="listitem">
+                        <img src="images/aqidatuna.jpeg" alt="Poster Kitab Aqidatuna" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Aqidatuna</h3>
+                            <p class="project-desc">Kitab aqidah yang membahas rukun iman, sifat-sifat Allah, dan tauhid
+                                secara mendalam dan sistematis.</p>
+                            <button class="btn btn-detail">Lihat Detail</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card matan-card" data-category="matan" data-aos="zoom-in"
+                        data-aos-delay="600" data-title="Fathul Ali"
+                        data-desc="Kitab fiqih yang menjelaskan hukum-hukum ibadah (thaharah, shalat, puasa, zakat, haji) beserta dalilnya."
+                        data-link="https://docs.google.com/document/d/1Mqm8I_RCh40xVuHFBcoRz57YreAXV6b10QBd8GiH-Go/edit?usp=sharing"
+                        role="listitem">
+                        <img src="images/fathul aliy.jpeg" alt="Poster Kitab Fathul Ali" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Fathul Ali</h3>
+                            <p class="project-desc">Kitab fiqih yang menjelaskan hukum-hukum ibadah (thaharah, shalat,
+                                puasa, zakat, haji) beserta dalilnya.</p>
+                            <button class="btn btn-detail">Lihat Detail</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card matan-card" data-category="matan" data-aos="zoom-in"
+                        data-aos-delay="700" data-title="Nabiyyuna"
+                        data-desc="Kitab yang membahas sifat mulia, akhlak, dan perjalanan dakwah Nabi Muhammad ﷺ secara lengkap."
+                        data-link="https://docs.google.com/document/d/1h8dx3iLZezg9WeSN_r4t6FvTR3HeYGHBYd20ux4d9d8/edit?usp=sharing"
+                        role="listitem">
+                        <img src="images/nabiyyuna.jpeg" alt="Poster Kitab Nabiyyuna" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Nabiyyuna</h3>
+                            <p class="project-desc">Kitab yang membahas sifat mulia, akhlak, dan perjalanan dakwah Nabi
+                                Muhammad ﷺ secara lengkap.</p>
+                            <button class="btn btn-detail">Lihat Detail</button>
+                        </div>
+                    </article>
+
+                    <!-- ==================== 2 CARD CODING ==================== -->
+                    <article class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="100"
+                        role="listitem">
+                        <img src="images/project-coding-responsive.png" alt="Coding Project 1" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Project Coding 1</h3>
+                            <p class="project-desc">Deskripsi project coding pertama.</p>
+                            <a href="https://web-sederhana-git-main-nuraizyrasyid-7576s-projects.vercel.app/"
+                                class="btn" target="_blank">Lihat Project</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="200"
+                        role="listitem">
+                        <img src="images/coding-text-formating.png" alt="Coding Project 2" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Project Coding 2</h3>
+                            <p class="project-desc">Deskripsi project coding kedua.</p>
+                            <a href="https://www.instagram.com/rasy.id6544/" class="btn" target="_blank">Lihat
+                                Project</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="200"
+                        role="listitem">
+                        <img src="images/project-skl.png" alt="Coding Project 2" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title">Project SKL SIPUSTAKA Semester 2</h3>
+                            <p class="project-desc">Deskripsi project coding ketiga.</p>
+                            <a href="https://rasyidnuraisy.pythonanywhere.com/" class="btn" target="_blank">Lihat
+                                Project</a>
+                        </div>
+                    </article>
+
+                </div> <!-- Akhir project-grid -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title" data-aos="zoom-in">Contact Me</h2>
+            <p class="name" data-aos="zoom-in" data-aos-delay="200">Rasyid Nur Aisy</p>
+            <p class="description" data-aos="zoom-in" data-aos-delay="400">
+                Jika Anda tertarik berkolaborasi atau hanya ingin ngobrol, jangan ragu hubungi saya.
+            </p>
+            <div class="social" data-aos="zoom-in" data-aos-delay="600">
+                <a href="https://wa.me/6283160891392" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/rasyid-instagram" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCVaTxM1Xwwqgy41tXVBQmJA" target="_blank"
+                    rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/nuraizyrasyid-stack" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright" data-aos="zoom-in" data-aos-delay="800">
+                © 2025 Rasyid Nur Aisy. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <div id="matanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Judul Kitab</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+
+            <div class="modal-body">
+                <p id="modalDesc"></p>
+
+                <div class="modal-actions">
+                    <button id="openDocBtn" class="btn btn-primary">Buka Dokumen Lengkap</button>
+                    <button class="btn btn-secondary" onclick="closeMatanModal()">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
